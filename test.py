@@ -10,9 +10,14 @@ data = [[1, 2], [1, 3]]
 torchdata = torch.tensor(data)  
 nparr = np.array(data)
 torcharr = torch.from_numpy(nparr)
+torcharr.shape
+torcharr.dtype
+tocharr.device
 
 print(nparr)
 print(torcharr)
+
+
 
 
 
