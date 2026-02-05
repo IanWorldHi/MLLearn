@@ -12,7 +12,7 @@ nparr = np.array(data)
 torcharr = torch.from_numpy(nparr)
 torcharr.shape
 torcharr.dtype
-tocharr.device
+torcharr.device
 
 print(nparr)
 print(torcharr)
