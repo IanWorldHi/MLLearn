@@ -12,10 +12,9 @@ Additional Notes:
 Has: deep learning primitives, nn layer types, activation & loss functions, optimizers (on NVIDIA chips)
 
 
-
 Overview Plan:
 OpenCV to find keypoints.
-PyTorch Keypoint R-CNN or YOLO11, ViTPose to find keypoints based on human. (filter keypoints to keyratios/angles)
+PyTorch and YOLOv8 Pose, ViTPose, MMPose to find keypoints based on human. (filter keypoints to keyratios/angles)
     Find out which options for keypoint detection are best
 Train small NN or logistic regression classifier to determine good/bad posture.
 Add Backend then deploy.
