@@ -42,6 +42,11 @@ awfhejka = torch.ones((5, 3), dtype=torch.float64, device='cpu')
 """ print(nparr)
 print(torcharr) """
 
+#tensor
+#multidimensional array
+
+
+
 
 
 
