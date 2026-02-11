@@ -1,3 +1,5 @@
+#Note: Do not need to spend an exessive amountof time here
+
 import torch
 from torch.utils.data import Dataset
 from torchvision import datasets   
