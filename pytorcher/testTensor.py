@@ -1,11 +1,11 @@
 #Note: Do not need to spend an exessive amountof time here
 
 import torch
+import numpy as np
 from torch.utils.data import Dataset
 from torchvision import datasets   
 from torchvision.transforms import ToTensor
 import matplotlib.pyplot as plt
-import numpy as np
 #Need to learn some numpy I guess
 # Faster becuase all in same part of memory, regular python lists are not
 
@@ -13,7 +13,7 @@ import numpy as np
 #Compared to CPU so like in google collab you can specify it with settings
 
 #These two are for Loading Dataset
-training_data = datasets.FashionMNIST(
+""" training_data = datasets.FashionMNIST(
     root="data", #path where data stoerd
     train=True, 
     download=True, #downloads from internet if not in root
@@ -24,7 +24,7 @@ test_data = datasets.FashionMNIST(
     train=False,
     download=True,
     transform=ToTensor()
-)
+) """
 
 
 #Tensors: like arrays/matrices to encode inputs/outputs
@@ -38,6 +38,10 @@ torcharr.shape
 torcharr.dtype #default float32
 torcharr.device
 awfhejka = torch.ones((5, 3), dtype=torch.float64, device='cpu')
+
+torch.manual_seed(42) #for reproducibility, sets the seed for generating random numbers
+rand1 = torch.rand(2, 4)
+print(rand1)
 
 """ print(nparr)
 print(torcharr) """
