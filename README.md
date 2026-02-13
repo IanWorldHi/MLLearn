@@ -11,7 +11,6 @@ Signifcant updates since then: torch.compile,
 Additional Notes:
 Has: deep learning primitives, nn layer types, activation & loss functions, optimizers (on NVIDIA chips)
 
-
 Overview Plan:
 OpenCV to find keypoints.
 PyTorch and YOLOv8 Pose, ViTPose, MMPose to find keypoints based on human. (filter keypoints to keyratios/angles)
@@ -22,6 +21,18 @@ Add Backend then deploy.
 
 Todo:
 Look for preexisting sitting posture datasets
+
+
+
+Actual Notes:
+Link: https://docs.google.com/document/d/1U5abbSzZvI6JGDtnuu2W8OisjzJU-0dkfZh0DvNB4Uo/edit?tab=t.0
+Automatic Differentiation Engine:
+    Computation as a graph built at run time
+    Example with: recurrent neural network (RNN)
+        
+
+(consideration for single training pass)
+
 
 
 
