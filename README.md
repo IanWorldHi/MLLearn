@@ -29,7 +29,7 @@ Link: https://docs.google.com/document/d/1U5abbSzZvI6JGDtnuu2W8OisjzJU-0dkfZh0Dv
 Automatic Differentiation Engine:
     Computation as a graph built at run time
     Example with: recurrent neural network (RNN)
-        
+    
 
 (consideration for single training pass)
 
