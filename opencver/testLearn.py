@@ -2,8 +2,9 @@
 
 import cv2 as cv
 
-
-
+img = cv.imread('photosOpenCvEx/Screenshot_20230120_050930.png')
+#Read an image in as a matrix of pixels
+git ad
 
 
 
