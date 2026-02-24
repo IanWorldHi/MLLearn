@@ -15,20 +15,23 @@ def rescaleFrame(frame, scale=0.75):
     width = int(frame.shape[1] * scale)
     height = int(frame.shape[0] * scale)
     dimensions = (width, height)
-    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA) #interpolation is method for resizing, ie diffs in squashing img
 
-
+def changeRes(capture, width, height): #Only webcam
+    capture.set(3, width) #3 is the width, 4 is the height, ie 10 is brightness
+    capture.set(4, height)
 
 capture = cv.VideoCapture('opencvVideosEx/WIN_20250303_14_19_33_Pro.mp4')
 #capture = cv.VideoCapture(0) #for webcam, other nums for other cams
+capture = cv.VideoCapture(0)
 
 while True:
     isTrue, frame = capture.read() #reads in video frame by frame, bool if succesful
     if not isTrue:
         break
-    frame_resized = rescaleFrame(frame, scale=0.3)
+    frame_resized = rescaleFrame(frame, scale=0.35)
     cv.imshow('Video', frame_resized)
-    if cv.waitKey(20) & 0xFF==ord('d'): #means if d is pressed, break
+    if cv.waitKey(20) & 0xFF==ord('d'): #means if d is pressed, break - cv.waitKey(20) means wait 20 ms for a key press, & 0xFF is a bitwise operation to get the last 8 bits of the key press
         break
     
 
