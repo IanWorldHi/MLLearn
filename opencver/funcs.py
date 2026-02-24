@@ -29,6 +29,12 @@ if img is not None:
         return cv.warpAffine(img, transMat, dimensions)
     translated = translate(img, 100, 100)
     
+    #rotation
+    #cv.getRotationMatrix2D(center, angle, scale)
+    #cv.wrapAffine(img, rotMat, dimensions)
+    
+    #flip
+    #cv.flip(image, flipcode) #flipcode: 0 = vertical, 1 = horizontal, -1 = both
     
     
     cv.imshow('nameOfWindow', translated)
