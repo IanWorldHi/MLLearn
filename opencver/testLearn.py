@@ -11,14 +11,26 @@ img = cv.imread('photosOpenCvEx/Screenshot_20230120_050930.png')
     #cv.waitKey(0)
 #waits amount of time for a keyboard input, 0 means indefinitely, ie 1000 = 1 sec then quit
 
+def rescaleFrame(frame, scale=0.75):
+    width = int(frame.shape[1] * scale)
+    height = int(frame.shape[0] * scale)
+    dimensions = (width, height)
+    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+
+
+
 capture = cv.VideoCapture('opencvVideosEx/WIN_20250303_14_19_33_Pro.mp4')
 #capture = cv.VideoCapture(0) #for webcam, other nums for other cams
 
 while True:
     isTrue, frame = capture.read() #reads in video frame by frame, bool if succesful
-    cv.imshow('Video', frame)
-    if cv.waitKey(20) & 0xFF==ord('d'):
+    if not isTrue:
         break
+    frame_resized = rescaleFrame(frame, scale=0.3)
+    cv.imshow('Video', frame_resized)
+    if cv.waitKey(20) & 0xFF==ord('d'): #means if d is pressed, break
+        break
+    
 
 capture.release()
 cv.destroyAllWindows()
