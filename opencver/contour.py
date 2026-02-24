@@ -11,14 +11,31 @@ def rescaleFrame(frame, scale=0.75):
 
 img = rescaleFrame(img, scale=0.5)
 img = cv.cvtColor(img, cv.COLOR_BGR2GRAY) 
+""" img = cv.GaussianBlur(img, (3,3), cv.BORDER_DEFAULT)
+img = cv.Canny(img, 75, 125)  """
+
+#alt way of procesing for contours - thresholds to black and white pixels (THRESH_BINARY)
+ret, thresh = cv.threshold(img, 125, 255, cv.THRESH_BINARY)
+
+
+#contours, hierachies = cv.findContours(img, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE) #retrieval mode, contour approximation method
+contours, hierachies = cv.findContours(thresh, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
+
+blank = np.zeros(img.shape, dtype='uint8')
+cv.drawContours(blank, contours, -1, 255, 1) #-1 = draw all contours, color(just one here cuz its grayed), thickness of line
 
 if img is not None:
-    cv.imshow('nameOfWindow', img)
+    cv.imshow('blank', blank)
+    #cv.imshow('nameOfWindow', img)
+    cv.imshow('nameOfWindow2', thresh)
 
 
 #contours
 #They are the boundaries of objects 
 
 cv.waitKey(0)
+
+#print(f'{img} lets see')
+
 
 
