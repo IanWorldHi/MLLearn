@@ -30,6 +30,7 @@ if img is not None:
     translated = translate(img, 100, 100)
     
     
+    
     cv.imshow('nameOfWindow', translated)
     cv.waitKey(0)
 
