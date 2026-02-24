@@ -3,6 +3,8 @@ import numpy as np
 
 img = cv.imread('photosOpenCvEx/Screenshot_20230120_050930.png')
 if img is not None:
+    #opencv is BGR not RGB which is normally the default
+    
     #Greyscale - important for just looking at intensity of pixels
     gray= cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     
