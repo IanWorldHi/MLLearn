@@ -13,8 +13,9 @@ Has: deep learning primitives, nn layer types, activation & loss functions, opti
 
 Overview Plan:
 OpenCV to find keypoints.
-PyTorch and YOLOv8 Pose, ViTPose, MMPose to find keypoints based on human. (filter keypoints to keyratios/angles)
+PyTorch and YOLOv8 Pose, ViTPose, MMPose to find keypoints based on human. (filter keypoints to keyratios/angles) 
     Find out which options for keypoint detection are best
+    Note: Looking for monocoular 3D  (YOLOv8 Pose -> PoseFormer or MotionBERT?)
 Train small NN or logistic regression classifier to determine good/bad posture.
 Add Backend then deploy.
 

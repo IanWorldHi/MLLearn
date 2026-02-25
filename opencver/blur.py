@@ -17,11 +17,13 @@ cricle = cv.circle(blank.copy(), (200,200), 200, (255,255,255), -1)
 #bitwise and
 ba = cv.bitwise_and(rectangle, cricle)
 
+
 if img is not None:
     #img = cv.bilateralFilter(img, 5, 75, 75) 
     #cv.imshow('nameOfWindow4', img)
     cv.imshow('rect', rectangle)
     cv.imshow('circ', cricle)
+    cv.imshow('bitwise and', ba)
     
 
 cv.waitKey(0)
