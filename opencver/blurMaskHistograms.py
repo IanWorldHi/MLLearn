@@ -24,7 +24,6 @@ img = cv.imread('photosOpenCvEx/Screenshot_20230120_051143.png')
 #Focus on certain parts of an iamge
 
 
-
 if img is not None:
     blank = np.zeros(img.shape[:2], dtype='uint8')
     maske = cv.circle(blank, (img.shape[1]//2, img.shape[0]//2), 100, (255,255,255), -1)
