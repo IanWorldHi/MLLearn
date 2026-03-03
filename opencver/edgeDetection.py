@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 img = cv.imread('photosOpenCvEx/Screenshot_20230120_051143.png')
 
 
-
 if img is not None:
     blank = np.zeros(img.shape[:2], dtype='uint8')
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
