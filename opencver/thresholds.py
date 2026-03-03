@@ -19,7 +19,9 @@ if img is not None:
     
     #Adaptive Thresholding - computer auto finds best threshold values
     adaptive_thresh2 = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 11, 3)
-    #img, max value, adaptive method (mean or gaussian), type of thresholding (binary, binary inv, trunc, tozero, tozero inv), block size (neighborhood), constant subtracted from mean
+    #img, max value, adaptive method (mean or gaussian), 
+    #type of thresholding (binary, binary inv, trunc, tozero, tozero inv), 
+    #block size (neighborhood), constant subtracted from mean
     
     
     img = cv.resize(img, (int(img.shape[1] * 0.3), int(img.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
