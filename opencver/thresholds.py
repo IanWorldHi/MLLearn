@@ -20,6 +20,8 @@ if img is not None:
     #Adaptive Thresholding - has diff threshold for diff parts of the image/lighting
     
     img = cv.resize(img, (int(img.shape[1] * 0.3), int(img.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
+    thresh = cv.resize(thresh, (int(thresh.shape[1] * 0.3), int(thresh.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
+    
     cv.imshow('nameOfWindow4', img)
     cv.imshow('thresholded', thresh)
     
