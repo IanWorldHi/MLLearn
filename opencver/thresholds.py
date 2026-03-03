@@ -12,19 +12,23 @@ if img is not None:
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     
     #Simple Thresholding
-    threshold, thresh = cv.threshold(gray, 150, 255, cv.THRESH_BINARY)
+    threshold, thresh = cv.threshold(gray, 100, 255, cv.THRESH_BINARY)
     #img, threshold value, max value, type of thresholding (binary, binary inv, trunc, tozero, tozero inv)
     #returns: thresh = binarized image, threshold = same threshold value so 150
     
     
-    #Adaptive Thresholding - has diff threshold for diff parts of the image/lighting
+    #Adaptive Thresholding - computer auto finds best threshold values
+    adaptive_thresh2 = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 11, 3)
+    #img, max value, adaptive method (mean or gaussian), type of thresholding (binary, binary inv, trunc, tozero, tozero inv), block size (neighborhood), constant subtracted from mean
+    
     
     img = cv.resize(img, (int(img.shape[1] * 0.3), int(img.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
     thresh = cv.resize(thresh, (int(thresh.shape[1] * 0.3), int(thresh.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
+    adaptive_thresh2 = cv.resize(adaptive_thresh2, (int(adaptive_thresh2.shape[1] * 0.3), int(adaptive_thresh2.shape[0] * 0.3)), interpolation=cv.INTER_AREA)
     
     cv.imshow('nameOfWindow4', img)
     cv.imshow('thresholded', thresh)
-    
+    cv.imshow('adaptive thresholded', adaptive_thresh2)
     
     
 
