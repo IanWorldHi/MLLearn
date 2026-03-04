@@ -23,7 +23,7 @@ while True:
         break
     frame_resized = rescaleFrame(frame, scale=0.7)
     frame_resized = cv.cvtColor(frame_resized, cv.COLOR_BGR2GRAY) 
-    frame_resized = cv.flip(frame_resized, 1) 
+    frame_resized = cv.flip(frame_resized, 1)
     
     haar_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
     #instance of haar cascade classifier
