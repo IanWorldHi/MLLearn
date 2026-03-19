@@ -1,3 +1,5 @@
+Note: While be saving models on google colab for now
+
 Notes for GPU usage:
 
 I have an AMD card so I would have to use some third party libraries to translate to CUDA
