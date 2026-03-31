@@ -23,7 +23,8 @@ Add Backend then deploy.
 Todo:
 Look for preexisting sitting posture datasets
 
-
+Activation functions of Pytorch: (have to figure out which one is the best) 
+https://docs.pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity
 
 Actual Notes:
 Link: https://docs.google.com/document/d/1U5abbSzZvI6JGDtnuu2W8OisjzJU-0dkfZh0DvNB4Uo/edit?tab=t.0
@@ -34,6 +35,7 @@ Automatic Differentiation Engine:
 
 (consideration for single training pass)
 
-
+For visualization:
+https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.09198&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
 
 
