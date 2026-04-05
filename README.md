@@ -13,7 +13,7 @@ Has: deep learning primitives, nn layer types, activation & loss functions, opti
 
 Overview Plan:
 OpenCV to find keypoints.
-Going to use keypoint-RCNN because there's more manual processing to be done
+Going to use keypoint-RCNN because there's more manual processing to be done. Nevermind - its not 3D
 
 PyTorch and YOLOv8 Pose, ViTPose, MMPose to find keypoints based on human. (filter keypoints to keyratios/angles) 
     Find out which options for keypoint detection are best
