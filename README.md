@@ -46,3 +46,6 @@ https://ethanweber.me/documents/posturepal.pdf
 ^Interesting way of classifying and calculating data - vectors relative to chest vector and posture types (https://ethanweber.me/ one of the guys who was part of it - maybe can contact him with questions and stuff maybe hes a helpful guy)
 
 
+Possible Frontend implementations: 
+
+
