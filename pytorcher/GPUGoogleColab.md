@@ -9,3 +9,5 @@ OR: just use google colab
 https://colab.research.google.com/notebooks/gpu.ipynb 
 https://pytorch.org/get-started/cloud-partners/
 
+
+

@@ -25,6 +25,7 @@ while True:
     frame_resized = cv.cvtColor(frame_resized, cv.COLOR_BGR2GRAY) 
     frame_resized = cv.flip(frame_resized, 1)
     
+    #This is depreciated - new thing / if want to use this, can import contrib package or smth
     haar_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
     #instance of haar cascade classifier
     faces_rect = haar_cascade.detectMultiScale(frame_resized, scaleFactor=1.1, minNeighbors=1)
